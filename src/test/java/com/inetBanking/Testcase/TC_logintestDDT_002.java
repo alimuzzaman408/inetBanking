@@ -2,7 +2,7 @@ package com.inetBanking.Testcase;
 
 import java.io.IOException;
 
-import org.openqa.selenium.NoAlertPresentException;
+
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -13,19 +13,20 @@ import com.inetBanking.utilies.Testutil;
 public class TC_logintestDDT_002 extends Base {
 
 	@Test(dataProvider="LoginData")
-	public void loginDDT(String user,String pwd) throws InterruptedException
+	public void loginDDT(String user,String pwd) throws InterruptedException, IOException
 	{
 		LoginPage lp=new LoginPage(driver);
-		lp.setusername(uname);;
+		lp.setusername(user);
 		logger.info("user name provided");
-		lp.setpassword(pwd);;
+		lp.setpassword(pwd);
 		logger.info("password provided");
 		Thread.sleep(3000);
 		lp.clicklogin();;
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 
 		if(isAlertPresent()==true)
 		{
+			
 			driver.switchTo().alert().accept();//close alert
 			driver.switchTo().defaultContent();
 			Assert.assertTrue(false);
@@ -53,7 +54,7 @@ public class TC_logintestDDT_002 extends Base {
 			driver.switchTo().alert();
 			return true;
 		}
-		catch(NoAlertPresentException e)
+		catch(Exception e)
 		{
 			return false;
 		}
@@ -64,7 +65,7 @@ public class TC_logintestDDT_002 extends Base {
 	@DataProvider(name="LoginData")
 	String [][] getData() throws IOException
 	{
-		String path=System.getProperty("user.dir")+"/src/test/java/com/inetBanking/Testdata/testdata.xlsx";
+		String path=".//src/test/java/com/inetBanking/Testdata/testdata.xlsx";
 
 		int rownum=Testutil.getRowCount(path, "login");
 		int colcount=Testutil.getCellCount(path,"login",1);

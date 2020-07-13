@@ -10,82 +10,88 @@ import org.openqa.selenium.support.PageFactory;
 public class AddCustomer {
 
 	WebDriver ldriver;
+
 	public AddCustomer(WebDriver sdriver) {
 
-		ldriver=sdriver;
-		PageFactory.initElements(sdriver, this);	
+		ldriver = sdriver;
+		PageFactory.initElements(sdriver, this);
 	}
 
-
-	@FindBy(how = How.XPATH, using ="/html/body/div[3]/div/ul/li[2]/a")
+	@FindBy(how = How.XPATH, using = "//a[contains(text(),'New Customer')]")
 	@CacheLookup
 	WebElement newcustomer;
 
-	@FindBy(name="name")
+	@FindBy(name = "name")
 	@CacheLookup
 	WebElement cusname;
 
-	@FindBy(name="rad1")
+	@FindBy(name = "rad1")
 	@CacheLookup
 	WebElement gender;
 
-	@FindBy(name="dob")
+	@FindBy(name = "dob")
 	@CacheLookup
 	WebElement Date;
 
-
-	@FindBy(name="addr")
+	@FindBy(name = "addr")
 	@CacheLookup
 	WebElement address;
 
-	@FindBy(name="city")
+	@FindBy(name = "city")
 	@CacheLookup
 	WebElement city;
 
-	@FindBy(name="state")
+	@FindBy(name = "state")
 	@CacheLookup
 	WebElement State;
 
-	@FindBy(name="pinno")
+	@FindBy(name = "pinno")
 	@CacheLookup
 	WebElement Pinno;
 
-	@FindBy(name="telephoneno")
+	@FindBy(name = "telephoneno")
 	@CacheLookup
 	WebElement telephone;
 
-	@FindBy(name="emailid")
+	@FindBy(name = "emailid")
 	@CacheLookup
 	WebElement email;
 
-	@FindBy(name="password")
+	@FindBy(name = "password")
 	@CacheLookup
 	WebElement password;
 
-	@FindBy(xpath="//input[@name='sub']")
+	@FindBy(xpath = "//input[@name='sub']")
 
 	@CacheLookup
 	WebElement submit;
+
 	public void clickcustomer() {
-		newcustomer.click();;
+		newcustomer.click();
+		;
 	}
+
 	public void setcustomer(String name) {
 		cusname.sendKeys(name);
 	}
+
 	public void genderclass(String mal) {
 		gender.click();
-	} 
-	public void enterdate(String mm,String dd,String yy) {
+	}
+
+	public void enterdate(String mm, String dd, String yy) {
 		Date.sendKeys(dd);
 		Date.sendKeys(yy);
 	}
 
 	public void cusaddress(String addrs) {
-		address.sendKeys(addrs);;
+		address.sendKeys(addrs);
+		;
 	}
 
 	public void customercity(String citi) {
-		city.sendKeys(citi);;
+		city.sendKeys(citi);
+		;
 	}
 
 	public void customerstate(String stat) {
@@ -95,12 +101,14 @@ public class AddCustomer {
 	public void customerpinno(String pinnum) {
 		Pinno.sendKeys(String.valueOf(pinnum));
 	}
+
 	public void customertelephone(String telepho) {
 		telephone.sendKeys(telepho);
 	}
 
 	public void customeremail(String emailid) {
-		email.sendKeys(emailid);;
+		email.sendKeys(emailid);
+		;
 	}
 
 	public void customerpassword(String passw) {
@@ -110,25 +118,5 @@ public class AddCustomer {
 	public void clicksubmit() {
 		submit.click();
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

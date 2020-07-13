@@ -2,6 +2,7 @@ package com.inetBanking.Testcase;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.RandomStringUtils;
@@ -24,11 +25,20 @@ public class Base {
 	public String url=readconfig.geturl();
 	public String uname=readconfig.getusername();
 	public String paword=readconfig.getpassword();
+	public String br=readconfig.getbrowser();
 	public static WebDriver driver;
 	public static Logger logger;
+
+
 	@Parameters("browser")
 	@BeforeClass
 	public void setup(String br) {
+
+		logger=Logger.getLogger("inetBanking");
+		PropertyConfigurator.configure("log4j.properties");
+
+
+
 		if(br.equals("chrome"))
 		{
 			System.setProperty("webdriver.chrome.driver",readconfig.getchromepath() );
@@ -44,9 +54,12 @@ public class Base {
 			System.setProperty("webdriver.edge.driver",readconfig.getrdgepath() );
 			driver=new EdgeDriver();;
 		}
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		driver.get(url);
-		logger=Logger.getLogger("inetBanking");
-		PropertyConfigurator.configure("log4j.properties");
+
+
+
 	}
 
 
@@ -56,7 +69,7 @@ public class Base {
 		driver.quit();
 	}
 
-	public String randomestring()
+	public static String randomestring()
 	{
 		String generatedstring=RandomStringUtils.randomAlphabetic(9);
 		return(generatedstring);
@@ -73,23 +86,20 @@ public class Base {
 		File source=ts.getScreenshotAs(OutputType.FILE);
 		File target=new File(System.getProperty("user.dir") +"/ScreenShots/"+tname+".png");
 		FileUtils.copyFile(source, target);
-		System.out.println("Screenshot token");
-		//		public static void takeScreenshotAtEndOfTest() throws IOException {
-		//			File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		//			String currentDir = System.getProperty("user.dir");
-		//			FileUtils.copyFile(scrFile, new File(currentDir + "/ScreenShots/" + System.currentTimeMillis() + ".png"));
-		//		
-		//	}
-
+		System.out.println("Screenshot taken");
 
 
 	}
 
 
 
-
-
-
-
-
 }
+
+
+
+
+
+
+
+
+
