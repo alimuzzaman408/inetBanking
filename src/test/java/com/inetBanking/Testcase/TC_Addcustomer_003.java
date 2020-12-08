@@ -21,8 +21,8 @@ public class TC_Addcustomer_003 extends Base{
 		adcus.customerstate("newjersey");
 		adcus.customertelephone("6466376908");
 		adcus.enterdate("07", "06", "1992");
-		adcus.customerpassword("jbjhkjkj");
-		adcus.customerpinno("757210");//123406
+		adcus.customerpassword("uiouy");
+		adcus.customerpinno("458761");//123406
 		adcus.genderclass("male");
 		String Email=randomestring()+"@gmail.com";
 		adcus.customeremail(Email);

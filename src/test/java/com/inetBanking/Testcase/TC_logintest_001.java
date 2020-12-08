@@ -22,6 +22,7 @@ public class TC_logintest_001 extends Base {
 		login.clicklogin();
 		logger.info("Login button has clicked");
 		System.out.println("Title of the home page:"+driver.getTitle());
+		
 		if(driver.getTitle().equals("Guru99 Bank Manager HomePage")) {
 			Assert.assertTrue(true);
 			logger.info("Title test is passed");

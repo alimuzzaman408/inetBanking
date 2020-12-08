@@ -14,11 +14,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
 import com.inetBanking.utilies.Readconfig;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Base {
 	Readconfig readconfig=new Readconfig ();
@@ -43,22 +46,23 @@ public class Base {
 		{
 			System.setProperty("webdriver.chrome.driver",readconfig.getchromepath() );
 			driver=new ChromeDriver();
+			
 		}
 		else if(br.equals("firefox"))
 		{
 			System.setProperty("webdriver.gecko.driver",readconfig.getfirefoxpath() );
 			driver=new FirefoxDriver();
+			
 		}
-		else if(br.equals("edge"))
+		else if(br.equals("ie"))
 		{
-			System.setProperty("webdriver.edge.driver",readconfig.getrdgepath() );
-			driver=new EdgeDriver();;
+			WebDriverManager.iedriver().setup();
+			driver=new InternetExplorerDriver();
+			
 		}
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		driver.get(url);
-
-
 
 	}
 
@@ -69,6 +73,8 @@ public class Base {
 		driver.quit();
 	}
 
+	
+	
 	public static String randomestring()
 	{
 		String generatedstring=RandomStringUtils.randomAlphabetic(9);
@@ -80,11 +86,12 @@ public class Base {
 		return (generatedString2);
 	}
 
+	
 	public void captureScreen(WebDriver driver,String tname) throws IOException {
 
 		TakesScreenshot ts=(TakesScreenshot)driver;
 		File source=ts.getScreenshotAs(OutputType.FILE);
-		File target=new File(System.getProperty("user.dir") +"/ScreenShots/"+tname+".png");
+		File target=new File(System.getProperty("user.dir") +"/Screenshots/"+tname+".png");
 		FileUtils.copyFile(source, target);
 		System.out.println("Screenshot taken");
 

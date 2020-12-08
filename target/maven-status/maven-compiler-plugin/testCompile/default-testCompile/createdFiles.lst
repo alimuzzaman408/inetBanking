@@ -1,6 +1,8 @@
+mypackage\Myclass.class
 com\inetBanking\PageObject\AddCustomer.class
 com\inetBanking\Testcase\TC_logintestDDT_002.class
 com\inetBanking\utilies\Readconfig.class
+com\inetBanking\utilies\WaitHelper.class
 com\inetBanking\utilies\Testutil.class
 com\inetBanking\PageObject\LoginPage.class
 com\inetBanking\Testcase\TC_logintest_001.class

@@ -7,11 +7,16 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.inetBanking.utilies.WaitHelper;
+
 public class LoginPage {
-	WebDriver  driver;
-	public LoginPage(WebDriver driver){	
-		this.driver=driver;
-		PageFactory.initElements(driver, this);
+	public WebDriver  driver;
+	 WaitHelper waithelper;
+	
+	public LoginPage(WebDriver ldriver){	
+		this.driver=ldriver;
+		PageFactory.initElements(ldriver, this);
+		waithelper=new WaitHelper(ldriver);
 
 	}
 	@CacheLookup
@@ -29,16 +34,18 @@ public class LoginPage {
 	WebElement lnkLogout;
 
 	public void setusername(String name) {
+		waithelper.waitforElement(username, 20);
 		username.sendKeys(name);
 
 	}
 	public void setpassword(String pass) {
-
+		waithelper.waitforElement(Pasword, 20);
 		Pasword.sendKeys(pass);
 
 	}
 
 	public void clicklogin() {
+		waithelper.waitforElement(clickbtn, 15);
 		clickbtn.click();
 	}
 

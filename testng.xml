@@ -10,9 +10,9 @@
 	<test name="Banking App Test">
 		<parameter name="browser" value="chrome" />
 		<classes>
-			<class name="com.inetBanking.Testcase.TC_logintest_001" />
-			<class name="com.inetBanking.Testcase.TC_logintestDDT_002" />
-			<class name="com.inetBanking.Testcase.TC_Addcustomer_003" />
+		 <class name="com.inetBanking.Testcase.TC_logintest_001" />
+		 <class name="com.inetBanking.Testcase.TC_logintestDDT_002" /> 
+		 <class name="com.inetBanking.Testcase.TC_Addcustomer_003" />  
 		</classes>
 	</test>
 

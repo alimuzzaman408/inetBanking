@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="13.094" tests="4" errors="0" skipped="0" failures="1">
+<testsuite name="TestSuite" time="30.267" tests="6" errors="0" skipped="0" failures="2">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_101\jre\bin"/>
@@ -28,7 +28,7 @@
     <property name="os.name" value="Windows 10"/>
     <property name="classworlds.conf" value="C:\apache-maven-3.3.9\bin\..\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_101\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Java\jdk1.8.0_101/bin;C:\Program Files\Java\jdk1.8.0_101/bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\HP SimplePass 2012\x64;C:\Program Files (x86)\HP SimplePass 2012\;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\12.0\DLLShared\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\Broadcom\WHL\;C:\Program Files\Broadcom\WHL\syswow64;C:\Program Files\Broadcom\WHL\SysWow64\;C:\Program Files\Broadcom\WHL\SysWow64\syswow64;C:\Program Files (x86)\Intel\Services\IPT\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\C:\Program Files\Java\jdk1.8.0_101\bin;C:\apache-maven-3.3.9\bin;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\Java\jdk1.8.0_101\bin;C:\Program Files\Java\jre1.8.0_101\bin;C:\Program Files\nodejs\;C:\Program Files\nodejs\node_modules\npm\bin;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_101\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\HP SimplePass 2012\x64;C:\Program Files (x86)\HP SimplePass 2012\;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\12.0\DLLShared\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\Broadcom\WHL\;C:\Program Files\Broadcom\WHL\syswow64;C:\Program Files\Broadcom\WHL\SysWow64\;C:\Program Files\Broadcom\WHL\SysWow64\syswow64;C:\Program Files (x86)\Intel\Services\IPT\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\C:\Program Files\Java\jdk1.8.0_101\bin;C:\apache-maven-3.3.9\bin;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\Java\jdk1.8.0_101\bin;C:\Program Files\Java\jre1.8.0_101\bin;C:\Program Files\nodejs\;C:\Program Files\nodejs\node_modules\npm\bin;C:\gradle-6.5\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Android\Android Studio\bin;C:\Users\shapan\AppData\Local\Android\Sdk\build-tools;C:\Users\shapan\AppData\Local\Android\Sdk\tools;C:\Users\shapan\AppData\Local\Android\Sdk\platform-tools;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -60,18 +60,32 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="loginDDT" classname="com.inetBanking.Testcase.TC_logintestDDT_002" time="13.094"/>
-  <testcase name="loginDDT" classname="com.inetBanking.Testcase.TC_logintestDDT_002" time="8.36">
-    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[contains(text(),&apos;Log out&apos;)]&quot;}&#10;  (Session info: chrome=83.0.4103.97)&#10;  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.18362 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 0 milliseconds&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;SHAPAN-HP&apos;, ip: &apos;192.168.1.237&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_101&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\WINDOWS\TEMP\scoped_dir1...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 83.0.4103.97, webStorageEnabled: true}&#10;Session ID: b9bb8477d7ae3b02bdbe9d34a7a4dc7c&#10;*** Element info: {Using=xpath, value=//a[contains(text(),&apos;Log out&apos;)]}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(text(),'Log out')]"}
-  (Session info: chrome=83.0.4103.97)
-  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.18362 x86_64) (WARNING: The server did not provide any stacktrace information)
+  <testcase name="logintest" classname="com.inetBanking.Testcase.TC_logintest_001" time="3.686"/>
+  <testcase name="loginDDT" classname="com.inetBanking.Testcase.TC_logintestDDT_002" time="13.339"/>
+  <testcase name="loginDDT" classname="com.inetBanking.Testcase.TC_logintestDDT_002" time="9.373">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertTrue(Assert.java:43)
+	at org.testng.Assert.assertTrue(Assert.java:53)
+	at com.inetBanking.Testcase.TC_logintestDDT_002.loginDDT(TC_logintestDDT_002.java:32)
+</failure>
+    <system-out><![CDATA[12-08-2020 13:56:18 TC_logintestDDT_002.java INFO  [main] inetBanking 20 - user name provided
+12-08-2020 13:56:18 TC_logintestDDT_002.java INFO  [main] inetBanking 22 - password provided
+]]></system-out>
+  </testcase>
+  <testcase name="loginDDT" classname="com.inetBanking.Testcase.TC_logintestDDT_002" time="12.815"/>
+  <testcase name="loginDDT" classname="com.inetBanking.Testcase.TC_logintestDDT_002" time="18.467">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[contains(text(),&apos;Log out&apos;)]&quot;}&#10;  (Session info: chrome=86.0.4240.75)&#10;  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 0 milliseconds&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;SHAPAN-HP&apos;, ip: &apos;192.168.1.237&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_101&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\WINDOWS\TEMP\scoped_dir8...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 86.0.4240.75, webStorageEnabled: true}&#10;Session ID: db4e3b4f132591f86319b376557468a6&#10;*** Element info: {Using=xpath, value=//a[contains(text(),&apos;Log out&apos;)]}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(text(),'Log out')]"}
+  (Session info: chrome=86.0.4240.75)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'SHAPAN-HP', ip: '192.168.1.237', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\WINDOWS\TEMP\scoped_dir1...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 83.0.4103.97, webStorageEnabled: true}
-Session ID: b9bb8477d7ae3b02bdbe9d34a7a4dc7c
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\WINDOWS\TEMP\scoped_dir8...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 86.0.4240.75, webStorageEnabled: true}
+Session ID: db4e3b4f132591f86319b376557468a6
 *** Element info: {Using=xpath, value=//a[contains(text(),'Log out')]}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -91,7 +105,7 @@ Session ID: b9bb8477d7ae3b02bdbe9d34a7a4dc7c
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy9.getWrappedElement(Unknown Source)
+	at com.sun.proxy.$Proxy10.getWrappedElement(Unknown Source)
 	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:50)
 	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
 	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
@@ -101,14 +115,13 @@ Session ID: b9bb8477d7ae3b02bdbe9d34a7a4dc7c
 	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
 	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
 	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:484)
-	at com.inetBanking.PageObject.LoginPage.logOut(LoginPage.java:47)
-	at com.inetBanking.Testcase.TC_logintestDDT_002.loginDDT(TC_logintestDDT_002.java:38)
+	at com.inetBanking.PageObject.LoginPage.logOut(LoginPage.java:54)
+	at com.inetBanking.Testcase.TC_logintestDDT_002.loginDDT(TC_logintestDDT_002.java:39)
 </failure>
-    <system-out><![CDATA[06-07-2020 07:24:51 TC_logintestDDT_002.java INFO  [main] inetBanking 20 - user name provided
-06-07-2020 07:24:51 TC_logintestDDT_002.java INFO  [main] inetBanking 22 - password provided
-06-07-2020 07:24:59 TC_logintestDDT_002.java INFO  [main] inetBanking 37 - Login passed
+    <system-out><![CDATA[12-08-2020 13:56:40 TC_logintestDDT_002.java INFO  [main] inetBanking 20 - user name provided
+12-08-2020 13:56:40 TC_logintestDDT_002.java INFO  [main] inetBanking 22 - password provided
+12-08-2020 13:56:48 TC_logintestDDT_002.java INFO  [main] inetBanking 38 - Login passed
 ]]></system-out>
   </testcase>
-  <testcase name="loginDDT" classname="com.inetBanking.Testcase.TC_logintestDDT_002" time="12.374"/>
-  <testcase name="loginDDT" classname="com.inetBanking.Testcase.TC_logintestDDT_002" time="12.574"/>
+  <testcase name="addingCustomer" classname="com.inetBanking.Testcase.TC_Addcustomer_003" time="13.242"/>
 </testsuite>
